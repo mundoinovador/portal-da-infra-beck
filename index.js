@@ -5,7 +5,7 @@ import cors from "cors";
 const app = express();
 app.use(
   cors({
-    origin: "https://mundoinovador.github.io/portal-da-infra/",
+    origin: "https://mundoinovador.github.io",
   })
 );
 app.use(express.json());
