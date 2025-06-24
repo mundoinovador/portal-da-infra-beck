@@ -3,7 +3,11 @@ import nodemailer from "nodemailer";
 import cors from "cors";
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://mundoinovador.github.io/portal-da-infra/",
+  })
+);
 app.use(express.json());
 
 app.post("/send-email", async (req, res) => {
