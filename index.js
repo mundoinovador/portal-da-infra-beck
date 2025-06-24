@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.post("/send-email", async (req, res) => {
   const { nameUser, email, wpp, source } = req.body;
+  console.log("Requisição recebida:", { nameUser, email, wpp, source }); // ← importante
 
   const transporter = nodemailer.createTransport({
     service: "gmail", // ou outro serviço SMTP
