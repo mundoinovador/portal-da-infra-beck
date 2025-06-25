@@ -3,12 +3,15 @@ import nodemailer from "nodemailer";
 import cors from "cors";
 
 const app = express();
+
 app.use(
   cors({
-    origin: "https://mundoinovador.github.io" || "http://localhost:5173",
+    origin: "https://mundoinovador.github.io",
   })
 );
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.post("/send-email", async (req, res) => {
   const { nameUser, email, wpp, source } = req.body;
