@@ -5,17 +5,17 @@ import cors from "cors";
 const app = express();
 app.use(
   cors({
-    origin: "https://mundoinovador.github.io",
+    origin: ["https://mundoinovador.github.io", "http://localhost:5173"],
   })
 );
 app.use(express.json());
 
 app.post("/send-email", async (req, res) => {
   const { nameUser, email, wpp, source } = req.body;
-  console.log("Requisição recebida:", { nameUser, email, wpp, source }); // ← importante
+  console.log("Requisição recebida:", { nameUser, email, wpp, source });
 
   const transporter = nodemailer.createTransport({
-    service: "gmail", // ou outro serviço SMTP
+    service: "gmail",
     auth: {
       user: "nicolasnkprogramador@gmail.com",
       pass: "phck fnek fasx kqic",
