@@ -73,10 +73,10 @@ app.post("/send-email", async (req, res) => {
           <p>Um novo usuário acabou de preencher o formulário do site, ele está aguardando ser chamado</p>
 
           <ul>
-            <li>Nome</li>
-            <li>Email</li>
-            <li>Telefone</li>
-            <li>Plataforma de origem</li>
+            <li>Nome: ${nameUser}</li>
+            <li>E-mail: ${email}</li>
+            <li>Whatsapp: ${wpp}</li>
+            <li>Plataforma de origem: ${source}</li>
           </ul>
 
           <button>Entrar em contato</button>
