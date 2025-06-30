@@ -30,6 +30,61 @@ app.post("/send-email", async (req, res) => {
     to: "nicolasnkprogramador@gmail.com",
     subject: "Novo contato do site",
     text: `Nome: ${nameUser}\nEmail: ${email}\nWhatsApp: ${wpp}\nFonte: ${source}`,
+    html: `
+    <html>
+      <head>
+        <style>
+          .text-container {
+            background-color: #000;
+            text-align: center;
+            padding-block: 4rem 15rem;
+          }
+
+          h1 {
+            color: white;
+            margin-bottom: 2rem;
+            margin-top: 4rem;
+          }
+
+          p {
+            color:rgb(200, 200, 200);
+          }
+
+          ul li {
+            text-align: left;
+            color: white;
+          }
+
+          button {
+            padding: 1rem 1.5rem;
+            color: white;
+            border: 1px solid white;
+            background-color: black;
+            margin-bottom: 4rem;
+            cursor: pointer;
+          }
+        </style>
+      </head>
+    
+      <body>
+
+        <div class="text-container">
+          <h1>Novo Lead</h1>
+          <p>Um novo usuário acabou de preencher o formulário do site, ele está aguardando ser chamado</p>
+
+          <ul>
+            <li>Nome</li>
+            <li>Email</li>
+            <li>Telefone</li>
+            <li>Plataforma de origem</li>
+          </ul>
+
+          <button>Entrar em contato</button>
+          <button>Mensagem automatica</button>
+        </div>
+      </body>
+    </html>
+  `,
   };
 
   try {
