@@ -6,7 +6,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://mundoinovador.github.io", "http://localhost:5173"],
+    origin: ["https://mundoinovador.github.io", "http://localhost:4321"],
   })
 );
 
