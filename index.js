@@ -6,7 +6,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:4321", "https://portal-da-infra-fk3ptsyld-nicolas-projects-9f65694d.vercel.app'],
+    origin: ["http://localhost:4321", "https://portal-da-infra-fk3ptsyld-nicolas-projects-9f65694d.vercel.app"],
   })
 );
 
