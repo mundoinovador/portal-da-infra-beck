@@ -6,7 +6,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: '*',
+    origin: 'https://portal-da-infra-omicei98o-nicolas-projects-3fb58508.vercel.app',
   })
 );
 
